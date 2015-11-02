@@ -1,0 +1,25 @@
+{
+  "name": "Markdown Viewer",
+  "short_name": "Markdown Viewer",
+  "version": "1.0.0",
+  "manifest_version": 2,
+  "description": "View Markdown files rendered to HTML with syntax highlighting.",
+  "author": "Chris Schmich <schmch@gmail.com>",
+  "homepage_url": "https://github.com/schmich/markdown-viewer",
+  "offline_enabled": true,
+  "permissions": [
+    "tabs",
+    "<all_urls>"
+  ],
+  "background": {
+    "persistent": true,
+    "scripts": ["lib/URI.min.js", "background.js"]
+  },
+  "icons": {
+    "16": "icons/128.png",
+    "32": "icons/128.png",
+    "64": "icons/128.png",
+    "128": "icons/128.png"
+  },
+  "content_security_policy": "script-src 'self'; object-src 'self'"
+}
