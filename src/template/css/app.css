@@ -1,0 +1,39 @@
+.toolbar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 100px;
+  padding-top: 20px;
+  padding-right: 20px;
+}
+.toolbar:hover .button {
+  background: #3399cc;
+  color: #fff;
+  border: 1px solid #3399cc;
+}
+.button {
+  float: right;
+  background: #fff;
+  color: #ccc;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 11px 35px;
+  cursor: pointer;
+  transition: all 150ms ease;
+}
+.markdown-body {
+  min-width: 200px;
+  max-width: 790px;
+  margin: 0 auto;
+  padding: 30px;
+}
+.markdown-source {
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  font-family: monospace;
+  font-size: 13px;
+}
+.hidden {
+  display: none;
+}

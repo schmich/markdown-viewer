@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <base href="{{base}}">
+  <link rel="stylesheet" type="text/css" href="css/app.css">
+  <link rel="stylesheet" type="text/css" href="css/github-markdown.css">
+  <link rel="stylesheet" type="text/css" href="css/highlight.min.css">
+  <link rel="stylesheet" type="text/css" href="css/highlight/github.css">
+  <script src="js/app.js"></script>
+</head>
+<body>
+  <div class="toolbar">
+    <button id="source" class="button">Source</button>
+    <button id="formatted" class="button hidden">Formatted</button>
+  </div>
+  <div class="markdown-body">
+    {{formatted}}
+  </div>
+  <div class="markdown-source hidden">{{source}}</div>
+</body>
+</html>

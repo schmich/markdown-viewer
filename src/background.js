@@ -1,13 +1,9 @@
 function onMarkdownLoaded(tab) {
-  chrome.tabs.insertCSS(tab.id, { file: 'css/style.css' }, function() {
+  chrome.tabs.insertCSS(tab.id, { code: 'html{display:none;}', runAt: 'document_start' }, function() {
     chrome.tabs.executeScript(tab.id, { file: 'lib/marked.min.js' }, function() {
       chrome.tabs.executeScript(tab.id, { file: 'lib/highlight.min.js' }, function() {
-        chrome.tabs.insertCSS(tab.id, { file: 'css/github-markdown.css' }, function() {
-          chrome.tabs.insertCSS(tab.id, { file: 'css/highlight.min.css' }, function() {
-            chrome.tabs.insertCSS(tab.id, { file: 'css/highlight/github.css' }, function() {
-              chrome.tabs.executeScript(tab.id, { file: 'inject.js' }, null);
-            });
-          });
+        chrome.tabs.executeScript(tab.id, { file: 'inject.js' }, function() {
+          chrome.pageAction.show(tab.id);
         });
       });
     });

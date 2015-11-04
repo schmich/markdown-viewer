@@ -21,5 +21,9 @@
     "64": "icons/128.png",
     "128": "icons/128.png"
   },
+  "page_action": {
+    "default_icon": "icons/page-action.png"
+  },
+  "web_accessible_resources": ["template/*"],
   "content_security_policy": "script-src 'self'; object-src 'self'"
 }
